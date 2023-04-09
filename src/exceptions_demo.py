@@ -82,15 +82,16 @@ def this_raises_custom_exception():
         model = get_aircraft_model(BAD_RESPONSE)
     except KeyError as e:
         raise IkarusException from e
+        # raise RuntimeError("Received Ikarus response") from e
     else:
         print(model)
 
 
 if __name__ == "__main__":
-    this_succeeds()
+    # this_succeeds()
     # this_fails()
     # this_catches_exception()
     # this_catches_multiple_exceptions()
     # this_uses_else_clause()
     # this_uses_finally_clause()
-    # this_raises_custom_exception()
+    this_raises_custom_exception()
