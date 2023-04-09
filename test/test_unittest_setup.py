@@ -12,7 +12,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_file_is_not_closed(self):
         write_to_file(self.file, "Hello from unittest")
-        self.assertEqual(self.file.closed, False)
+        self.assertFalse(self.file.closed)
 
 
 if __name__ == '__main__':
